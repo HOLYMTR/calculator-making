@@ -1,0 +1,110 @@
+/* style.css */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, grey, blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    background-color: aqua;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2) inset;
+    width: 260px;
+    transition: transform 0.2s;
+}
+
+.calculator:hover {
+    transform: scale(1.02);
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 70%;
+}
+
+.operators {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 25%;
+}
+
+button {
+    padding: 12px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.numbers button {
+    background-color: #f0f0f0;
+}
+
+.numbers button:hover {
+    background-color: #e0f7fa;
+    transform: translateY(-2px);
+}
+
+.numbers button:nth-child(12) {
+    background-color: #ffcdd2;
+}
+
+.numbers button:nth-child(12):hover {
+    background-color: #f79898;
+}
+
+.numbers button:nth-child(13) {
+    background-color: #c8e6c9;
+}
+
+.numbers button:nth-child(13):hover {
+    background-color: #a5d6a7;
+}
+
+.operators button {
+    background-color: #ffa4a2;
+    color: #fff;
+}
+
+.operators button:hover {
+    background-color: #ffcc80;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.operators button:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.numbers button.zero {
+    grid-column: span 2;
+}
